@@ -1,65 +1,103 @@
 # ⚡ GitHub Doc Generator
 
-Une application web moderne développée avec **Next.js 15**, **React** et **Tailwind CSS** permettant de générer automatiquement des documentations techniques et des fichiers `README.md` complets à partir de l'URL d'un dépôt GitHub.
+> Generate structured technical documentation from a public GitHub repository URL.
 
----
+## Problem
 
-## 🚀 Présentation
+Good documentation takes time, especially when a project contains multiple frameworks, dependencies, routes and environment variables.
 
-Rédiger une documentation claire, structurée et à jour pour un projet open-source ou professionnel est souvent une tâche fastidieuse. **GitHub Doc Generator** simplifie ce processus en analysant l'arborescence, les technologies détectées et les points d'entrée du code pour produire une documentation prête à l'emploi.
+GitHub Doc Generator analyses a public repository and turns the detected structure into documentation that can be edited, copied or exported.
 
----
+## Features
 
-## ✨ Fonctionnalités clés
+- 🔍 Repository structure analysis
+- 🧩 Framework and dependency detection
+- 📐 Architecture / flow documentation
+- 🛣️ API route and command documentation
+- 🔐 Environment-variable documentation
+- 🚀 Installation and deployment guidance
+- 👀 Markdown preview
+- 📋 Copy/export generated Markdown
+- 🗂️ Generation history and dashboard
+- 🌙 Dark interface with Lucide React
 
-- **🔍 Analyse instantanée de dépôts :**
-  - Entrez simplement l'URL de n'importe quel dépôt GitHub public pour lancer l'analyse de structure.
-  - Détection automatique des frameworks, des gestionnaires de paquets et des dépendances.
+## Architecture
 
-- **📑 Génération de documentation modulaire :**
-  - Aperçu général et badges du projet.
-  - Diagrammes d'architecture et de flux.
-  - Tableaux des routes d'API, commandes CLI et variables d'environnement.
-  - Guide d'installation et de déploiement pas-à-pas.
+```text
+GitHub repository URL
+        │
+        ▼
+ Repository analysis
+        │
+        ├── structure
+        ├── dependencies
+        ├── frameworks
+        ├── routes / commands
+        └── configuration
+                │
+                ▼
+        Documentation model
+                │
+                ▼
+       Markdown generation
+                │
+        ┌───────┴────────┐
+        ▼                ▼
+     Preview          Export / Copy
+```
 
-- **🎨 Interface Réactive & Moderne :**
-  - Thème sombre soigné avec icônes interactives (**Lucide React**).
-  - Modal d'authentification utilisateur et gestion de session.
-  - Historique et tableau de bord des documentations déjà générées avec statut en temps réel.
-  - Export instantané en Markdown ou copie dans le presse-papiers.
+## Stack
 
----
+- **Next.js 15** — App Router
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Lucide React**
+- **npm**
 
-## 🛠️ Stack Technique
+## Local development
 
-- **Framework :** [Next.js](https://nextjs.org/) 15 (App Router)
-- **UI / Bibliothèque :** [React](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/)
-- **Langage :** TypeScript
-- **Iconographie :** Lucide React
-- **Gestionnaire de paquets :** npm
+### Requirements
 
----
+- Node.js 18+
+- npm or pnpm
 
-## 💻 Démarrage Local
+### Install
 
-### Prérequis
-- [Node.js](https://nodejs.org/) version 18 ou supérieure.
-- npm ou pnpm.
-
-### 1. Installation des dépendances
 ```bash
 npm install
 ```
 
-### 2. Lancement du serveur de développement
+### Development server
+
 ```bash
 npm run dev
 ```
 
-Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur pour tester l'application.
+Open `http://localhost:3000`.
 
-### 3. Build pour la production
+### Production build
+
 ```bash
 npm run build
 npm run start
 ```
+
+## What this project demonstrates
+
+- Building a complete Next.js application rather than a static UI
+- Working with external GitHub repository data
+- Turning unstructured repository information into a reusable documentation model
+- Designing a developer-focused workflow around preview, history and export
+
+## Roadmap
+
+- Improve detection for more ecosystems
+- Add richer architecture diagrams
+- Improve generated documentation quality
+- Add automated tests for analysis and generation
+- Add CI for lint, tests and production builds
+
+## License
+
+See the repository for the current licensing information.
